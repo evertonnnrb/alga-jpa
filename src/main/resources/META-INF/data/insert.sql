@@ -1,0 +1,1 @@
+insert into produto (nome,descricao,valor)values('Caixa JBL','Caixa stereo',1500.0);
