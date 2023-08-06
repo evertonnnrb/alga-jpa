@@ -2,6 +2,7 @@ package org.example.model;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+import org.example.model.enuns.Sexo;
 
 import javax.persistence.*;
 
@@ -16,5 +17,6 @@ public class Cliente {
     @EqualsAndHashCode.Include
     private Long id;
     private String nome;
+    private Sexo sexo;
 
 }

@@ -1,6 +1,5 @@
 package org.example.model;
 
-import com.mysql.cj.xdevapi.Client;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -45,7 +44,7 @@ public class ClienteTest extends GenericManagerTest {
     @Test
     public void testDeveConsultarCliente() {
         testDeveCadatrarCliente();
-        Cliente cliente = manager.find(Cliente.class,1L);
+        Cliente cliente = manager.find(Cliente.class, 1L);
         Assert.assertNotNull(cliente);
     }
 }

@@ -9,14 +9,16 @@ import java.math.BigDecimal;
 @Data
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
 @Entity
-@Table(name = "produto")
-public class Produto {
+@Table(name = "item_pedido")
+public class ItemPedido {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @EqualsAndHashCode.Include
     private Long id;
-    private String nome;
-    private String descricao;
-    private BigDecimal valor;
+    private Integer pedidoId;
+    private Integer produtoId;
+    private BigDecimal precoProduto;
+    private Integer quantidade;
+
 }
