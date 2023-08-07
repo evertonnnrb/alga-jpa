@@ -16,7 +16,10 @@ public class Produto {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @EqualsAndHashCode.Include
     private Long id;
+
     private String nome;
+
     private String descricao;
+
     private BigDecimal valor;
 }

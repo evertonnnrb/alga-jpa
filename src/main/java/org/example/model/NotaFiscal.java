@@ -2,11 +2,8 @@ package org.example.model;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;
-import org.example.model.enuns.Status;
 
 import javax.persistence.*;
-import java.math.BigDecimal;
-import java.time.LocalDate;
 import java.util.Date;
 
 @Data
@@ -19,8 +16,13 @@ public class NotaFiscal {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @EqualsAndHashCode.Include
     private Long id;
+
+    @Column(name = "pedido_id")
     private Integer pedidoId;
+
     private String xml;
+
+    @Column(name = "data_emissao")
     private Date dataEmissao;
 
 }

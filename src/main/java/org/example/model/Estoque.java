@@ -15,7 +15,10 @@ public class Estoque {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @EqualsAndHashCode.Include
     private Long id;
+
+    @Column(name = "produto_id")
     private String produtoId;
+
     private Integer quantidade;
 
 }

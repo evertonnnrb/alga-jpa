@@ -7,8 +7,8 @@ import lombok.Getter;
 
 @AllArgsConstructor(access = AccessLevel.PRIVATE)
 public enum Sexo {
-    MASCULINO(0, "Masculino"),
-    FEMININO(1, "Feminino");
+    MASCULINO(1, "Masculino"),
+    FEMININO(2  , "Feminino");
 
     @Getter
     private Integer cod;

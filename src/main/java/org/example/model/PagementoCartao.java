@@ -16,8 +16,14 @@ public class PagementoCartao {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @EqualsAndHashCode.Include
     private Long id;
+
+    @Column(name = "pedido_id")
     private Integer pedidoId;
+
+    @Enumerated(EnumType.STRING)
+    @Column(name = "status_pagamento")
     private StatusPagamento statusPagamento;
+
     private String numero;
 
 }
