@@ -17,8 +17,9 @@ public class PagementoCartao {
     @EqualsAndHashCode.Include
     private Long id;
 
-    @Column(name = "pedido_id")
-    private Integer pedidoId;
+    @OneToOne
+    @JoinColumn(name = "pedido_id")
+    private Pedido pedido;
 
     @Enumerated(EnumType.STRING)
     @Column(name = "status_pagamento")

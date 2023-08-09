@@ -4,6 +4,8 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 
 import javax.persistence.*;
+import java.math.BigDecimal;
+import java.util.List;
 
 @Data
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
@@ -16,9 +18,9 @@ public class Estoque {
     @EqualsAndHashCode.Include
     private Long id;
 
-    @Column(name = "produto_id")
-    private String produtoId;
+    @OneToOne(optional = false)
+    @JoinColumn(name = "produto_id")
+    private Produto produto;
 
     private Integer quantidade;
-
 }

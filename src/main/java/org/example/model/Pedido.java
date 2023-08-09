@@ -31,8 +31,8 @@ public class Pedido {
     @Column(name = "data_conclusao")
     private LocalDate dataConclusao;
 
-    @Column(name = "nf_id")
-    private Integer nfId;
+    @OneToOne
+    private NotaFiscal nfId;
 
     @Enumerated(EnumType.STRING)
     private Status status;
@@ -44,4 +44,7 @@ public class Pedido {
 
     @Embedded
     private EnderecoEntrega enderecoEntrega;
+
+    @OneToOne(mappedBy = "pedido")
+    private PagementoCartao pagementoCartao;
 }

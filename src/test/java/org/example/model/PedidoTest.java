@@ -19,7 +19,7 @@ public class PedidoTest extends GenericManagerTest {
         pedido.setTotal(new BigDecimal(2000));
         pedido.setStatus(Status.PAGO);
         pedido.setDataConclusao(LocalDate.now());
-        pedido.setNfId(123);
+        //pedido.setNfId();
 
         pedido.setCliente(cliente);
 
